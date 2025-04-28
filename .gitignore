@@ -1,0 +1,10 @@
+"venv/"           # Virtual environment
+"*.pyc"           # Python compiled files
+"__pycache__/"    # Python cache
+"db.sqlite3"      # SQLite database
+".env"            # Environment variables
+"venv/"           # Virtual environment
+"*.pyc"           # Python compiled files
+"__pycache__/"    # Python cache
+"db.sqlite3"      # SQLite database
+".env"            # Environment variables
