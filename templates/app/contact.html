@@ -1,0 +1,21 @@
+{%load static%}
+
+<div class="about">
+  <h2>Contact Me</h2>
+<br>
+<form method = "post">
+  <div class="form">
+  <div class="label">
+  {% csrf_token %}
+  {%for field in form %}
+  <label  class ="field" for={{field.id_for_label}}>{{field.label}}</label>
+  <input  class="ip" id = {{field.id_for_label}} name={{field.name}} type = {{field.field.widget.input_type}}>
+  <br><br>
+  {% endfor %}
+  </div>
+  <div>
+  <input class="btn" type = "submit" value = "send">
+  </div>
+  </div>
+</form>
+</div>

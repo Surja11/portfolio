@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+  <title>Portfolio</title>
+</head>
+<body>
+  <div class="content">
+<header>
+  <nav class="navbar">
+    <div class="nav-container">
+    <a href="#" >Home</a>
+    <a href="#" >About</a>
+    <a href="#" >Projects</a>
+    <a href="#" >Contact</a>
+    <div>
+  </nav>
+</header>
+
+{%block content%}{%endblock%}
+</div>
+</body>
+<footer>
+</footer>
+</html>
