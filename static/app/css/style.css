@@ -1,4 +1,8 @@
-
+*{
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+}
 body{
   background-color: lch(97.89% 19.78 106.51);
   font-family:"Averia Serif Libre", sans-serif;
@@ -76,11 +80,12 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
-.about,.projects{
+.home,.about,.projects{
   color: #3e3e55;
   font-size: 1.5rem;
-  padding: 3rem;
+  padding: 6rem;
 
 }
 
@@ -105,6 +110,9 @@ body{
 .about h2:hover::after{
    transform: scaleX(1);
    cursor: pointer;
+}
+.about p{
+  text-align: justify;
 }
 .projects h2{
   text-align:center;
@@ -155,7 +163,7 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%
+
 }
 /* .label{
   width: 60%;
