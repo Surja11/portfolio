@@ -4,4 +4,58 @@
   
   <h2>Projects</h2>
   
+  <div class="project-slider">
+    <img id="project-img" class="project-image" />
+    <h3 id="project-name"></h3>
+    <p id="project-tech" class="project-tech"></p>
+    <p id="project-desc" class="project-desc"></p>
+    <a id="project-link" href="#" target="_blank" class="project-link">View Project</a>
+  
+    <div class="nav-buttons">
+      <button class="prev-btn">Previous</button>
+      <button class="next-btn">Next</button>
+    </div>
+  </div>
+  
+  
 </div>
+
+<script>
+  const projects = [
+    {% for project in projects %}
+      {
+        id: {{ project.id }},
+        name: "{{ project.name|escapejs }}",
+        description: "{{ project.short_description|escapejs }}",
+        img: "{{ project.thumbnail.url }}",
+        tech: "{{ project.tech_used|escapejs }}",
+        link: "{{ project.link|escapejs }}"
+      }{% if not forloop.last %},{% endif %}
+    {% endfor %}
+  ];
+
+  let currentProject = 0;
+
+  function showProject(index) {
+    const p = projects[index];
+    document.getElementById("project-img").src = p.img;
+    document.getElementById("project-name").textContent = p.name;
+    document.getElementById("project-tech").textContent = p.tech;
+    document.getElementById("project-desc").textContent = p.description;
+    document.getElementById("project-link").href = p.link;
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    showProject(currentProject);
+
+    document.querySelector(".next-btn").addEventListener("click", function () {
+      currentProject = (currentProject + 1) % projects.length;
+      showProject(currentProject);
+    });
+
+    document.querySelector(".prev-btn").addEventListener("click", function () {
+      currentProject = (currentProject - 1 + projects.length) % projects.length;
+      showProject(currentProject);
+    });
+  });
+</script>

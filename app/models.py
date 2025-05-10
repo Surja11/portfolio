@@ -9,7 +9,7 @@ class Contact(models.Model):
 class Project(models.Model):
   name = models.CharField(max_length=200)
   short_description = models.TextField()
-  thumbnail = models.ImageField()
+  thumbnail = models.ImageField(upload_to='apps/images')
   tech_used = models.CharField(max_length=500)
   link = models.CharField(max_length= 500)
 
