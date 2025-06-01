@@ -75,18 +75,25 @@ body{
   font-weight: 700;
   font-style: normal;
 }
-.about{
+.about,.projects,.contact{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
 }
-.home,.about,.projects{
+.home,.about,.projects,.contact{
   color: #3e3e55;
   font-size: 1.5rem;
   padding: 6rem;
 
+}
+.home{
+  display: flex;
+  justify-content: space-evenly;
+}
+.home img{
+  border-radius: 50%;
 }
 
 .about h2{
@@ -137,26 +144,34 @@ body{
   cursor: pointer;
 }
 
+
+
+
 .label{
   width: 100%;
 
 
 }
+.contact form{
+  width: 60%;
+}
 .ip{
   width: 100%;
   background-color: rgb(244, 245, 213);
   border: 1px solid,#5C4B99 ;
-  height: 2rem;
+  height: 2.5rem;
   border-radius: 5px;
+  padding-left: 0.5rem;
+  font-size:1rem;
 }
 
 .btn{
-  height: 2rem;
-  width: 4rem;
+  height: 2.5rem;
+  width: 5rem;
   border-radius: 7px;
   color:hsl(0, 0%, 100%);
   background-color: #3e3e55;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 .form{
   display: flex;
@@ -171,8 +186,11 @@ body{
 
 .projects {
   
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
+}
+.projects img{
+  border-radius: 10px;
 }
 
 .project-slider {
@@ -188,10 +206,9 @@ body{
 }
 
 .prev-btn, .next-btn {
-  margin: 1rem;
-  
+  margin: 3rem;
   height: 2rem;
-  width: 5rem;
+  width: 3rem;
   border-radius: 7px;
   color:hsl(0, 0%, 100%);
   background-color: #3e3e55;
