@@ -1,0 +1,12 @@
+[33madd994d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{0}: reset: moving to HEAD~2
+[33m17962b1[m HEAD@{1}: reset: moving to HEAD~4
+[33m93d10ef[m[33m ([m[1;31morigin/main[m[33m)[m HEAD@{2}: pull origin main: Fast-forward
+[33m752b37e[m HEAD@{3}: reset: moving to HEAD
+[33m752b37e[m HEAD@{4}: pull origin main: Fast-forward
+[33m17962b1[m HEAD@{5}: reset: moving to HEAD
+[33m17962b1[m HEAD@{6}: commit: Added css
+[33m7645f58[m HEAD@{7}: commit: Added javascript in projects
+[33madd994d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{8}: commit: added contact to admin and updated view
+[33mbc5c4f6[m HEAD@{9}: commit: Added contact
+[33md0c02b6[m HEAD@{10}: Branch: renamed refs/heads/master to refs/heads/main
+[33md0c02b6[m HEAD@{12}: commit (initial): Initial Django project setup
