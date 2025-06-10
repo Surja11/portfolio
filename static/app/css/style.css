@@ -12,13 +12,14 @@
 } */
 
 :root {
-  /* Light Mode (Default) */
+  
   --bg-color: lch(97.89% 19.78 106.51);
   --text-color: #2d2d44;
   --navbar-bg: rgba(253, 251, 212, 0.6);
   --accent-color: #5C4B99;
   --form-bg: lch(93.94% 27.07 104.78);
   --input-bg: rgb(244, 245, 213);
+  --input-text: #000;
   --button-bg: #3e3e56;
   --button-hover: #5C4B99;
 }
@@ -31,6 +32,7 @@
   --accent-color: #9f86c0;
   --form-bg: #16213e;
   --input-bg: #0f3460;
+  --input-text: lch(91.29% 0.01 296.81);;
   --button-bg: #5C4B99;
   --button-hover: #7d6ba5;
 }
@@ -90,9 +92,9 @@ body {
 }
 .theme-toggle {
   position: fixed;
-  top: 90px; /* Adjust based on your navbar height */
+  top: 90px; 
   right: 8px;
-  z-index: 1001; /* Above navbar's z-index (1000) */
+  z-index: 1001;  
   background: var(--accent-color);
   color: white;
   border: none;
@@ -298,6 +300,7 @@ section {
   padding-left: 0.5rem;
   font-size: 1rem;
   margin-bottom: 1rem;
+  color: var(--input-text);
 }
 
 .form {
@@ -309,15 +312,15 @@ section {
 
 @media screen and (max-width: 780px) {
   .theme-toggle {
-    top: 80px; /* Slightly lower on mobile */
+    top: 80px; 
     right: 15px;
     width: 36px;
     height: 36px;
   }
   
-  /* If navbar becomes taller on mobile */
+
   .navbar {
-    padding: 1rem 0; /* Reduce padding */
+    padding: 1rem 0; 
   }
   .navbar {
     flex-direction: column;
