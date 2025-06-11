@@ -212,8 +212,16 @@ section {
   cursor: pointer;
   margin-top: 3rem;
 }
+.about-all{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4rem;
+  padding: 2rem;
+}
 
 .about p {
+  display: inline-block;
   text-align: justify;
   margin-top: 1rem;
   line-height: 1.7;
@@ -223,6 +231,52 @@ section {
   margin-left: auto;  /* This pushes the paragraph to the right */
   margin-right: 0
 }
+
+.about-left{
+  text-align: justify;
+  margin-top: 1rem;
+  line-height: 1.7;
+  font-family: Nunito;
+  max-width: 800px;
+  padding:  0 3rem;
+  margin-left: auto;  /* This pushes the paragraph to the right */
+  margin-right: 2rem;
+
+}
+.about-left,.about-right{
+  flex: 1;
+  max-width: 50%;
+}
+.skills {
+  padding: 0;
+  margin: 1rem 0;
+  font-size: 2rem;
+  text-align: center;
+  color: var(--text-color);
+}
+
+/* Fun fact */
+.fun-fact {
+  font-style: italic;
+  color: var(--text-color);
+  text-align: center;
+}
+.code-block {
+  background-color: var(--bg-color);
+ 
+  font-family: monospace;
+  font-size: 0.95rem;
+  white-space: pre-wrap;
+  color: var(--text-color);
+}
+.quote {
+  font-style: italic;
+  font-size: 0.95rem;
+  text-align: center;
+  color: var(--text-color);
+}
+
+
 
 .projects {
   text-align: center;
@@ -358,6 +412,15 @@ footer a{
   .home pre{
     font-size: 1.2rem;
   }
+  .about-all{
+    display: flex;
+    flex-direction: column-reverse;
+
+  }
+  .about-left, .about-right{
+    max-width: 100%;
+  }
+  
   .prev-btn, .next-btn{
     margin: 2rem;
     height: 1.6rem;
