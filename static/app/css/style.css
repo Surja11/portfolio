@@ -23,6 +23,7 @@
   --button-bg: #3e3e56;
   --button-hover: #5C4B99;
   --footer-bg: rgba(253, 251, 212, 0.6);
+   scroll-padding-top: 80px;
 }
 
 [data-theme="dark"] {
@@ -37,6 +38,7 @@
   --button-bg: #5C4B99;
   --button-hover: hsl(259, 24%, 53%);
   --footer-bg: rgba(26, 26, 46, 0.8);
+   scroll-padding-top: 80px;
 }
 
 body {
@@ -129,6 +131,8 @@ section {
   justify-content: center;
   align-items: center;
   font-size: 1rem;
+  scroll-padding-top: 80px;
+
 }
 
 .home {
@@ -137,7 +141,7 @@ section {
   min-height: 90vh;
   background-color: var(--bg-color);
   color: var(--text-color);
-  margin-top: 5rem;
+  margin-top: 2rem;
   padding: 3rem;
 }
 
@@ -216,7 +220,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 4rem;
+  gap: 10px;
   padding: 2rem;
 }
 
@@ -263,11 +267,15 @@ section {
 }
 .code-block {
   background-color: var(--bg-color);
- 
   font-family: monospace;
   font-size: 0.95rem;
   white-space: pre-wrap;
   color: var(--text-color);
+  height:120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 .quote {
   font-style: italic;
@@ -305,7 +313,9 @@ section {
 .project-image:hover {
   transform: scale(1.02);
 }
-
+.project-link{
+  color: var(--accent-color);
+}
 .project-link:hover {
   opacity: 0.8;
   text-decoration: underline;
@@ -390,10 +400,7 @@ footer a{
   .navbar {
     padding: 1rem 0; 
   }
-  .navbar {
-    flex-direction: column;
-    gap: 1rem;
-  }
+
 
   .home {
     flex-direction: column;
@@ -435,6 +442,9 @@ footer a{
   } */
 }
 @media screen and (min-width: 1000px) {
+ .navbar a{
+  margin: 3rem;
+ }
   .about p{
     padding-right: 13rem;
   }
