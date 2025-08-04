@@ -48,33 +48,31 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+
 .navbar {
   display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 1.2rem;
+  padding: 1rem;
   justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: var(--navbar-bg);
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: var(--navbar-bg);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   z-index: 1000;
-  padding: 2rem 0;
 }
 
 .navbar a {
-  position: relative;
-  /* color: #5C4B99; */
-  color : var(--accent-color);
-  /* background-color: var(--accent-color); */
+  flex-shrink: 0;
+  color: var(--accent-color);
   text-decoration: none;
-  font-size: 1.1rem;
   font-weight: bold;
-  padding-bottom: 5px;
-  margin: 1rem;
-  transition: color 0.3s ease;
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+  position: relative;
 }
 
 .navbar a::after {
@@ -188,16 +186,17 @@ section {
 }
 
 .about h2,
-.projects h2 ,.contact h2{
+.projects h2 ,.contact h2,.skills-section h2{
   text-align: center;
   position: relative;
   padding-bottom: 1rem;
   font-family: 'Averia Serif Libre', serif;
   margin-top: 4rem;
+  cursor: pointer;
 }
 
-.about h2::after,
-.projects h2::after,.contact h2::after {
+.about h2::after, .skills-section h2::after,
+.projects h2::after,.contact h2::after{
   content: '';
   position: absolute;
   left: 42.5%;
@@ -211,7 +210,7 @@ section {
 }
 
 .about h2:hover::after,
-.projects h2:hover::after, .contact h2:hover::after{
+.projects h2:hover::after, .contact h2:hover::after,.skills-section h2:hover::after{
   transform: scaleX(1);
   cursor: pointer;
   margin-top: 3rem;
@@ -251,13 +250,52 @@ section {
   flex: 1;
   max-width: 50%;
 }
-.skills {
-  padding: 0;
-  margin: 1rem 0;
-  font-size: 2rem;
+
+.skills-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
   text-align: center;
-  color: var(--text-color);
 }
+
+/* .skills-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent-color, #1e90ff);
+  margin-bottom: 1rem;
+} */
+
+.skills-subtitle {
+  font-size: 1rem;
+  font-family: Nunito;
+  color: var(--input-text);
+  margin-bottom: 2.5rem;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.skill-box {
+  background-color: var(--button-bg); /* Light blue look */
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: Nunito;
+  color: lch(91.29% 0.01 296.81);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  transition: all 0.2s ease-in-out;
+}
+
+.skill-box:hover {
+  background-color: var(--button-hover);
+  transform: translateY(-2px);
+  cursor: default;
+}
+
 
 /* Fun fact */
 .fun-fact {
